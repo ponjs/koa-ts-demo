@@ -15,4 +15,4 @@ app.use(koaStatic('./src/public'))
 
 router(app)
 
-app.listen(7000, () => console.log('http://127.0.0.1:7000'))
+app.listen(7001, () => console.log('http://127.0.0.1:7001'))

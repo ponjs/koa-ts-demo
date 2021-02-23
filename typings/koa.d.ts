@@ -1,10 +1,10 @@
 import 'koa'
-import { Connection } from 'mysql'
 import { Send } from '../src/extend/send'
+import { Query } from '../src/extend/mysql'
 
 declare module 'koa' {
   interface Context {
     send: Send
-    db: Connection
+    db: Query
   }
 }

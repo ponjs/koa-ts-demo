@@ -4,8 +4,9 @@
  * 函数有可复用性
  */
 
-export function list() {
-  console.log(this)
+import { Context } from 'koa'
+
+export async function list(this: Context) {
   // 这里操作数据库
-  return ['node', 'vue', 'react']
+  return this.db('SELECT * FROM test')
 }

@@ -6,7 +6,7 @@
 import { Context } from 'koa'
 import * as service from '../service/user'
 
-export function index(ctx: Context) {
-  const data = service.list.call(ctx)
+export async function index(ctx: Context) {
+  const data = await service.list.call(ctx)
   ctx.send({ code: 200, data })
 }
